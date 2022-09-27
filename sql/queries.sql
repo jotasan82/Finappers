@@ -24,7 +24,7 @@ CREATE TABLE producto(
 	idProducto INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
     nombreProducto VARCHAR(45) NOT NULL,
     descripcionProducto VARCHAR(45),
-    usuario_correo VARCHAR(45) FOREING KEY
+    usuario_correo VARCHAR(45) FOREIGN KEY
 );
 
 # Mostrar tablas
