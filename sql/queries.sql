@@ -8,14 +8,23 @@ create DATABASE finappers;
 USE finappers;
 
 # Crear tabla
-CREATE TABLE mascotas(
-	id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-    nombre VARCHAR(50) NOT NULL,
-    apellido VARCHAR(80) NOT NULL,
-    tipo_mascota VARCHAR(30) NOT NULL, 
-    raza VARCHAR(15) NOT NULL,
-    edad INT NOT NULL,
-    observacion TEXT NOT NULL
+CREATE TABLE usuario(
+	correo VARCHAR(45) NOT NULL PRIMARY KEY,
+    contrasena VARCHAR(10) NOT NULL,
+    nombreUsuario VARCHAR(60) NOT NULL,
+    apellidoUsuario VARCHAR(60) NOT NULL
+);
+
+CREATE TABLE categoria(
+	idCategoria INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    nombreCategoria VARCHAR(45) NOT NULL
+);
+
+CREATE TABLE producto(
+	idProducto INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    nombreProducto VARCHAR(45) NOT NULL,
+    descripcionProducto VARCHAR(45),
+    usuario_correo VARCHAR(45) FOREING KEY
 );
 
 # Mostrar tablas
